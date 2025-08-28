@@ -39,3 +39,13 @@
 
 # debug information files
 *.dwo
+
+# build directory
+build/
+
+# vscode related
+.cache/
+.vscode/
+
+# binaries
+bin/
