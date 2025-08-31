@@ -45,13 +45,13 @@ find_package(OpenCV QUIET)
 if(NOT OpenCV_FOUND)
     message(STATUS "OpenCV not found. Running setup script...")
 
-    if(NOT EXISTS "${CMAKE_SOURCE_DIR}/include/opencv/install.sh")
-        message(FATAL_ERROR "OpenCV setup script not found at scripts/setup_opencv.sh")
+    if(NOT EXISTS "${CMAKE_SOURCE_DIR}/include/opencv_install.sh")
+        message(FATAL_ERROR "OpenCV setup script not found at /include/opencv_install.sh")
     endif()
 
     # Run the bash script
     execute_process(
-        COMMAND bash "${CMAKE_SOURCE_DIR}/include/opencv/install.sh"
+        COMMAND bash "${CMAKE_SOURCE_DIR}/include/opencv_install.sh"
         WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
         RESULT_VARIABLE res
     )
